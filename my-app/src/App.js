@@ -7,7 +7,7 @@ import NewRoomForm from "./components/NewRoomForm";
 
 import { tokenURL, instanceLocator } from "./config";
 
-class App extends React.Component() {
+class App extends React.Component {
   constructor() {
     super(); //calls constructor function in React.Component class
     this.state = {
@@ -26,7 +26,7 @@ class App extends React.Component() {
     const chatManager = new Chatkit.ChatManager({
       instanceLocator,
       userId: "Greg",
-      tokenProvider: new Chatkit.tokenProvider({
+      tokenProvider: new Chatkit.TokenProvider({
         url: tokenURL
         // in a non-testing environment, you'd have your own endpoint via Node
       })
