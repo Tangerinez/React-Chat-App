@@ -4,17 +4,15 @@ import Message from "./Message";
 
 class MessageList extends React.Component {
   componentWillUpdate() {
-    // triggered before component has updated
     const node = ReactDOM.findDOMNode(this);
     this.shouldScrollToBottom =
       node.scrollTop + node.clientHeight + 100 >= node.scrollHeight;
   }
 
   componentDidUpdate() {
-    // triggered after component has updated
     if (this.shouldScrollToBottom) {
       const node = ReactDOM.findDOMNode(this);
-      node.scrollTop = node.scrollHeight; // scrolls down as far possible as we can
+      node.scrollTop = node.scrollHeight;
     }
   }
 
@@ -22,10 +20,11 @@ class MessageList extends React.Component {
     if (!this.props.roomId) {
       return (
         <div className="message-list">
-          <div className="join-room"> &larr; Join a room!</div>
+          <div className="join-room">Join a room! &rarr;</div>
         </div>
       );
     }
+
     return (
       <div className="message-list">
         {this.props.messages.map((message, index) => {

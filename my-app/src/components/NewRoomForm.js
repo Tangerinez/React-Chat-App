@@ -10,14 +10,14 @@ class NewRoomForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
+  handleChange(e) {
     this.setState({
-      roomName: event.target.value
+      roomName: e.target.value
     });
   }
 
-  handleSubmit(event) {
-    event.preventDefault();
+  handleSubmit(e) {
+    e.preventDefault();
     this.props.createRoom(this.state.roomName);
     this.setState({ roomName: "" });
   }
@@ -25,7 +25,7 @@ class NewRoomForm extends React.Component {
   render() {
     return (
       <div className="new-room-form">
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <input
             value={this.state.roomName}
             onChange={this.handleChange}

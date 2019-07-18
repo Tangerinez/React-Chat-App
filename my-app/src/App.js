@@ -35,6 +35,7 @@ class App extends React.Component {
     chatManager
       .connect()
       .then(currentUser => {
+        console.log(currentUser);
         this.currentUser = currentUser;
         this.getRooms();
       })
@@ -54,6 +55,8 @@ class App extends React.Component {
   }
 
   sendMessage(text) {
+    console.log("app", text);
+    console.log(this.state.roomId);
     this.currentUser.sendMessage({
       text,
       roomId: this.state.roomId
@@ -75,7 +78,8 @@ class App extends React.Component {
       .subscribeToRoom({
         roomId: roomId,
         hooks: {
-          onNewMessage: message => {
+          onMessage: message => {
+            console.log("Added new message");
             this.setState({
               messages: [...this.state.messages, message] // Don't want to modify the original array, use setState()
             });

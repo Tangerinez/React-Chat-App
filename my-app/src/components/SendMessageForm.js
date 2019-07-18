@@ -6,18 +6,18 @@ class SendMessageForm extends React.Component {
     this.state = {
       message: ""
     };
-    this.handleChange = this.handleChange.bind(this); // bind this so that we have access to this.handleChange method
+    this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
+  handleChange(e) {
     this.setState({
-      message: event.target.value
+      message: e.target.value
     });
   }
 
-  handleSubmit(event) {
-    event.preventDefault();
+  handleSubmit(e) {
+    e.preventDefault();
     this.props.sendMessage(this.state.message);
     this.setState({
       message: ""
@@ -30,7 +30,7 @@ class SendMessageForm extends React.Component {
       <form onSubmit={this.handleSubmit} className="send-message-form">
         <input
           disabled={this.props.disabled}
-          onChange={this.handleChange} // whenever input field changes, then run this function
+          onChange={this.handleChange}
           value={this.state.message}
           placeholder="Type your message and hit ENTER"
           type="text"
