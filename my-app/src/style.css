@@ -20,10 +20,23 @@ body {
   height: 100%;
 }
 
+.app-title {
+  padding: 1em 0 2em 0;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.app-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .app {
   display: grid;
   height: 75vh;
-  width: 50%;
+  width: 70%;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 60px;
   grid-template-areas:
@@ -160,13 +173,17 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
-  font-size: 34px;
+  font-size: 20px;
   font-weight: 300;
 }
 
 .send-message-form {
   background: var(--send-message-form);
   display: flex;
+}
+
+.create-room-btn:hover {
+  cursor: pointer;
 }
 
 .send-message-form input {
