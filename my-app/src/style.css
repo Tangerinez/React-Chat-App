@@ -38,7 +38,7 @@ body {
   height: 60vh;
   width: 70%;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 60px;
+  grid-template-rows: 80px 1fr 1fr 1fr 1fr 80px;
   grid-template-areas:
     "n m m m m m"
     "r m m m m m"
@@ -47,7 +47,7 @@ body {
     "r m m m m m"
     "s s s s s s";
   border: 5px solid black;
-  border-radius: 0 10px 10px 0;
+  border-radius: 10px;
 }
 
 .new-room-form {
@@ -154,7 +154,8 @@ body {
 .message .message-text {
   background: var(--main-color);
   color: var(--secondary-color);
-  display: inline;
+  /* display: inline; */
+  margin: 0 8px 0 4px;
   padding: 4px 8px;
   border-radius: 8px;
 }
