@@ -1,4 +1,5 @@
 import React from "react";
+import "./NewRoomForm.scss";
 
 class NewRoomForm extends React.Component {
   constructor() {

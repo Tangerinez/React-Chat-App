@@ -1,4 +1,5 @@
 import React from "react";
+import "./RoomList.scss";
 
 class RoomList extends React.Component {
   render() {

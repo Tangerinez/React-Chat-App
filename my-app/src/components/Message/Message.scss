@@ -1,0 +1,20 @@
+@import "../../variables.scss";
+
+.message {
+  margin: 15px 0;
+}
+
+.message .message-username {
+  font-size: 11px;
+  color: $themeColor;
+  opacity: 0.9;
+  margin-bottom: 6px;
+}
+.message .message-text {
+  background: $backgroundColor;
+  color: $secondaryColor;
+  /* display: inline; */
+  margin: 0 8px 0 4px;
+  padding: 4px 8px;
+  border-radius: 8px;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import "./SendMessageForm.scss";
 
 class SendMessageForm extends React.Component {
   constructor() {

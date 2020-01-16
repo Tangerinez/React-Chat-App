@@ -1,0 +1,35 @@
+@import "../../variables.scss";
+
+.rooms-list {
+  grid-area: r;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: $themeColor;
+  overflow: scroll;
+  height: 100%;
+}
+
+.rooms-list ul {
+  list-style-type: none;
+  padding: 0;
+  overflow: scoll;
+}
+
+.rooms-list li {
+  margin: 10px 0;
+}
+
+.rooms-list h3 {
+  margin: 5px 0;
+  color: $secondaryColor;
+}
+
+.rooms-list .room a {
+  color: $secondaryTextColor;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.rooms-list .room.active a {
+  color: $secondaryColor;
+}

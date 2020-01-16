@@ -1,0 +1,48 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "system-ui";
+  font-weight: 200;
+  color: #c24763;
+}
+
+#root {
+  height: 100%;
+}
+
+.app-title {
+  padding: 2em 0 1em 0;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.app-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.app {
+  display: grid;
+  height: 60vh;
+  width: 70%;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 80px 1fr 1fr 1fr 1fr 80px;
+  grid-template-areas:
+    "n m m m m m"
+    "r m m m m m"
+    "r m m m m m"
+    "r m m m m m"
+    "r m m m m m"
+    "s s s s s s";
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+.help-text {
+  position: absolute;
+  top: 10px;
+}
