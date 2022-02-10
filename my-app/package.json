@@ -6,7 +6,7 @@
     "@pusher/chatkit": "^0.7.18",
     "@pusher/chatkit-client": "^1.13.4",
     "@pusher/chatkit-server": "^2.4.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "^3.3.0"
